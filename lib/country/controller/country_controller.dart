@@ -14,7 +14,7 @@ class CountryController extends GetxController {
 
   Future<List<dynamic>> fetchCountries() async {
     final response =
-    await http.get(Uri.parse('https://restcountries.com/v3.1/all'));
+        await http.get(Uri.parse('https://restcountries.com/v3.1/all'));
 
     if (response.statusCode == 200) {
       return json.decode(response.body);
@@ -44,5 +44,4 @@ class CountryController extends GetxController {
     filteredCountries.value = filteredList;
     isLoading.value = false;
   }
-
 }
